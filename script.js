@@ -1,22 +1,27 @@
-let ammount = document.getElementById("ammount")
-let intrest = document.getElementById("intrest")
-let month = document.getElementById("ammount")
-let calculate_in = document.getElementById("calculate_in")
-let bill_ammount = document.getElementById("bill_ammount")
+let input = document.querySelector("input");
+let buttons = document.querySelectorAll("button");
+let string = "";
+let arr = Array.from(buttons);
 
-calculate_in.addEventListener("click", () => {
-               if (ammount.value == "" || intrest.value == "" || month.value == "") {
-                              alert("Enteer Value")
-                              return;
-               } else {
-                              let p = ammount.value
-                              let r = intrest.value / 1200;
-                              let n = month.value;
-                              let Emi_ammont = (p * r * (1 + r) ** n) / ((1 + r) ** n - 1);
-                              bill_ammount.textContent = Emi_ammont.toFixed(2);
-               }
+arr.forEach(button =>{
+    button.addEventListener("click",function(e){
+        if(e.target.innerHTML == "="){
+            string = eval(string);
+            input.value = string;
+      }
+      else if(e.target.innerHTML == "AC")
+      {
+        string = "";
+        input.value = string;
+      }
+      else if(e.target.innerHTML =="DEL")
+      {
+        string = string.substring(0,string.length-1);
+        input.value = string;
+      }
+      else{
+        string += e.target.innerHTML;
+        input.value = string;
+      }
+    })
 })
-
-// function EMI() {
-//              x
-// }
