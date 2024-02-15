@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI CALCULATOR</title>
+    <link rel="stylesheet" href="./stye.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>EMI Calculator</h1>
+
+      <div class="loan_amount">
+        <label for=""> Loan Ammount </label>
+        <input type="number" min="0"  id="ammount" placeholder="Enter Loan Ammount" name="" id="" />
+      </div>
+      <div class="intrest_ammount">
+        <label for=""> Intrest Rate </label>
+        <input type="number" min="0" id="intrest" placeholder="Enter Intrest Rate" name="" id="" />
+      </div>
+      <div class="month_pay">
+        <label for=""> Month Pay </label>
+        <input type="number" min="0" id="month" placeholder="Enter Month In Pay" name="" id="" />
+      </div>
+      <button id="calculate_in">Calculate</button>
+      <div class="bill">
+               <h3>You Monthly Payment : <span id="bill_ammount"></span></h3>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
